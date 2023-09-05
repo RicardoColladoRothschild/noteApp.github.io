@@ -58,6 +58,7 @@ header button:hover {
   width: 340px;
   height: 320px;
   min-width: 320px;
+  margin-bottom: 75px;
 }
 .main-container .main-note--container .note-container--tools {
   width: 100%;
@@ -94,4 +95,5 @@ header button:hover {
   padding: 20px;
   font-size: 1.8rem;
   font-weight: bold;
+  margin-bottom: 35px;
 }
