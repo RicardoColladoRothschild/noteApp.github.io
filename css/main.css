@@ -12,3 +12,24 @@ html {
   font-size: 62.5%;
   font-family: "inconsolata", serif;
 }
+
+header {
+  width: 100%;
+  height: 150px;
+  padding: 35px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #EC8E71;
+}
+header button {
+  width: 121px;
+  height: 41px;
+  padding: 6px;
+  background-color: #E8562A;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #692713;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
