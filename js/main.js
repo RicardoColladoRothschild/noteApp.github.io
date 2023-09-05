@@ -26,4 +26,3 @@ function addNewNote(){
 
     mainContainer.append(mainNoteContainer);
 }
-
