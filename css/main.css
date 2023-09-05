@@ -38,3 +38,12 @@ header button:hover {
   background-color: #692713;
   color: #EC8E71;
 }
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  background-color: #E8562A;
+}
