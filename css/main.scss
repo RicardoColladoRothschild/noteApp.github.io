@@ -65,9 +65,10 @@ header{
 
     .main-note--container{
         width:340px;
-        height:320px;
+        height:auto;
         min-width: 320px;
         margin-bottom: 75px;
+        box-shadow: 8px 8px 8px rgba(0,0,0, 0.5);
             
             .note-container--tools{
                 width:100%;
@@ -111,11 +112,11 @@ header{
 
             .note-container--textArea{
                 width:100%;
-                height:100%;
+                height:320px;
                 padding:20px;
                 font-size:1.8rem;
                 font-weight: bold;
-                margin-bottom:35px;
+                
             }
     }
 }
