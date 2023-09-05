@@ -32,4 +32,9 @@ header button {
   border: none;
   border-radius: 16px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+header button:hover {
+  background-color: #692713;
+  color: #EC8E71;
 }

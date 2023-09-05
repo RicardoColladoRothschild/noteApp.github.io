@@ -39,6 +39,12 @@ header{
             border:none;
             border-radius: 16px;
             box-shadow: 4px 4px 8px rgba(0,0,0,0.50);
+            cursor:pointer;
+
+            &:hover{
+                background-color: $letter-color;
+                color:$secondary-color;
+            }
 
         }
 }
