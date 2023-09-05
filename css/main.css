@@ -67,5 +67,19 @@ header button:hover {
   width: 35px;
   height: 35px;
   border: none;
-  background-color: none;
+  background-color: #EC8E71;
+  background-image: url("../images/edit_icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.main-container .main-note--container .note-container--tools .tools--edit:hover, .main-container .main-note--container .note-container--tools .tools--delete:hover {
+  transform: scale(1.4);
+}
+.main-container .main-note--container .note-container--tools .tools--delete {
+  background-color: #EC8E71;
+  background-image: url("../images/delete_icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }

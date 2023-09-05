@@ -79,11 +79,26 @@ header{
                             width:35px;
                             height:35px;
                             border:none;
-                            background-color:none;
+                            background-color:$secondary-color;
+                            background-image: url('../images/edit_icon.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                            &:hover{
+                                transform: scale(1.4);
+                                
+                            }
 
                         }
                         .tools--delete{
                             @extend .tools--edit;
+                                
+                            background-color:$secondary-color;
+                            background-image: url('../images/delete_icon.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: contain;
+                        
                         }
                     
                         

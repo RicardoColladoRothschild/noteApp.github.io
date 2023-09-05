@@ -18,8 +18,8 @@ function addNewNote(){
 
     mainNoteContainer.innerHTML = `
     <div class="note-container--tools">
-    <button class="tools--edit">Edit</button>
-    <button class="tools--delete">Delete</button>
+    <button class="tools--edit"></button>
+    <button class="tools--delete"></button>
     </div>
     <textarea class="note-container--textArea"></textarea>
     `;
