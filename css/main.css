@@ -84,3 +84,10 @@ header button:hover {
   background-position: center;
   background-size: contain;
 }
+.main-container .main-note--container .note-container--textArea {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
