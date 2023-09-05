@@ -24,5 +24,16 @@ function addNewNote(){
     <textarea class="note-container--textArea"></textarea>
     `;
 
+        const deleteBtn = mainNoteContainer.querySelector('.tools--delete');
+        deleteBtn.addEventListener('click',()=>{
+            deleteANote(mainNoteContainer);
+        });
+
     mainContainer.append(mainNoteContainer);
+}
+
+
+
+function deleteANote(note){
+    note.remove();
 }
