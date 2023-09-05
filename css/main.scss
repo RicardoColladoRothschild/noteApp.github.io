@@ -56,7 +56,22 @@ header{
     justify-content: center;
     
     padding-top: 25px;
+    padding-left:15px;
+    padding-right:15px;
     background-color: $primary-color;
 
+    .main-note--container{
+        width:340px;
+        height:320px;
+        min-width: 320px;
 
+            .note-container--tools{
+                width:100%;
+                height:75px;
+                display:flex;
+                flex-direction: row;
+                gap:10px;
+                background-color: $secondary-color;
+            }
+    }
 }
