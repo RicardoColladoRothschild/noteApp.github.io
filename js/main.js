@@ -29,6 +29,20 @@ function addNewNote(){
             deleteANote(mainNoteContainer);
         });
 
+        const editBtn = mainNoteContainer.querySelector('.tools--edit');
+        editBtn.addEventListener('click',()=>{
+            const textArea = mainNoteContainer.querySelector('.note-container--textArea');
+            
+                let flag = textArea.hasAttribute('disabled');
+                console.log(flag);
+                if(flag){
+                    textArea.removeAttribute('disabled');
+                }else{
+                    textArea.setAttribute('disabled','disabled');
+                }
+       
+        });
+
     mainContainer.append(mainNoteContainer);
 }
 
