@@ -55,6 +55,15 @@ function addNewNote(text = ''){
        
         });
 
+
+        textArea.addEventListener('input', (e) => {
+            const { value } = e.target
+    
+            main.innerHTML = marked(value)
+    
+            updateLS()
+        })
+        
     mainContainer.append(mainNoteContainer);
     sendLocalStorage();
 }
@@ -66,10 +75,13 @@ function deleteANote(note){
     sendLocalStorage();
 }
 
+/**This function takes all the "textarea" information, and then set it to an array, 
+ * so we can then create a localStorage, as a JSON where "notes" IS THE KEY 
+ */
 function sendLocalStorage() {
     const notesText = document.querySelectorAll('textarea')
 
-    const notes = []
+    const notes = [];
 
     notesText.forEach(note => notes.push(note.value))
 
