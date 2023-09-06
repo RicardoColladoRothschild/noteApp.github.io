@@ -4,6 +4,15 @@ const mainContainer = document.querySelector('.main-container');
 //boton section
 const btnAdd = document.querySelector('.button-addNew');
 
+
+const notes = JSON.parse(localStorage.getItem('notes'));
+
+if(notes){
+    notes.forEach((note)=>{
+        addNewNote(note);
+    });
+}
+
 btnAdd.addEventListener('click',(event)=>{
     event.preventDefault();
     addNewNote();
@@ -12,7 +21,7 @@ btnAdd.addEventListener('click',(event)=>{
 
 
 
-function addNewNote(){
+function addNewNote(text = ''){
     const mainNoteContainer = document.createElement('div');
     mainNoteContainer.classList.add('main-note--container');
 
@@ -24,6 +33,8 @@ function addNewNote(){
     <textarea class="note-container--textArea"></textarea>
     `;
 
+        const textArea = mainNoteContainer.querySelector('.note-container--textArea');
+        textArea.value = text;
         const deleteBtn = mainNoteContainer.querySelector('.tools--delete');
         deleteBtn.addEventListener('click',()=>{
             deleteANote(mainNoteContainer);
@@ -31,23 +42,36 @@ function addNewNote(){
 
         const editBtn = mainNoteContainer.querySelector('.tools--edit');
         editBtn.addEventListener('click',()=>{
-            const textArea = mainNoteContainer.querySelector('.note-container--textArea');
+            
             
                 let flag = textArea.hasAttribute('disabled');
-                console.log(flag);
+                
                 if(flag){
                     textArea.removeAttribute('disabled');
                 }else{
                     textArea.setAttribute('disabled','disabled');
                 }
+                sendLocalStorage();
        
         });
 
     mainContainer.append(mainNoteContainer);
+    sendLocalStorage();
 }
 
 
 
 function deleteANote(note){
     note.remove();
+    sendLocalStorage();
+}
+
+function sendLocalStorage() {
+    const notesText = document.querySelectorAll('textarea')
+
+    const notes = []
+
+    notesText.forEach(note => notes.push(note.value))
+
+    localStorage.setItem('notes', JSON.stringify(notes))
 }
